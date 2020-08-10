@@ -1,11 +1,15 @@
 javascript: (function() {
 
+  //URL: https://www1.nseindia.com/products/content/equities/equities/eq_security.htm
+
   function getColumn(col) {
     //var tab = document.getElementById(table_id);
-    var path='//*[@id="historicalData"]/table';
+    var path='/html/body/div[2]/div[3]/div[2]/div[1]/div[3]/div/div[3]/table/tbody';
     var tab = document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
     var n = tab.rows.length;
     var i, s = null, tr, td;
+
+
 
     var arr=[];
 
